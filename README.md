@@ -78,7 +78,7 @@ portfolio/
 
 ### 1. Clonar el repositorio
 ```bash
-git clone https://github.com/weslykgua/portfolio.git
+git clone https://github.com/weslykgua/my-portfolio.git
 cd portfolio
 ```
 
