@@ -4,7 +4,7 @@ import React from "react"
 import { profile } from "@/lib/data"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { openEmailClient, scrollToSection } from "@/lib/utils"
-import { Mail } from "lucide-react"
+import { Home, Mail } from "lucide-react"
 
 const nav = [
   { label: "Experiencia", href: "#experience" },
@@ -27,17 +27,17 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex max-w-4xl items-center justify-between px-4 sm:px-6 py-3.5">
-        {/* Logo */}
+        {/* Logo / Inicio */}
         <a
           href="#top"
           onClick={(e) => handleNavClick(e, "#top")}
-          className="group font-mono text-sm font-medium tracking-tight transition-transform active:scale-95 duration-150 shrink-0"
+          className="group inline-flex items-center gap-2 rounded-lg border border-border/80 bg-secondary/50 px-2.5 py-1.5 font-mono text-xs font-semibold text-foreground shadow-2xs transition-all hover:border-brand/40 hover:bg-secondary active:scale-95 shrink-0"
+          aria-label="Ir al inicio"
         >
-          <span className="text-foreground transition-colors group-hover:text-brand">
-            {profile.shortName.toLowerCase().replace(" ", "")}
-          </span>
-          <span className="text-brand">.dev</span>
+          <Home className="h-3.5 w-3.5 text-brand transition-transform group-hover:-translate-y-0.5" />
+          <span>Inicio</span>
         </a>
+
 
         {/* Navigation Menu */}
         <nav aria-label="Navegación principal" className="hidden md:block">
