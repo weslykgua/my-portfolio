@@ -5,12 +5,10 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-export function openEmailClient(email: string, subject: string = "Contacto desde Portafolio Web") {
-  const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}`
-  const a = document.createElement("a")
-  a.href = mailtoUrl
-  a.click()
+export function getGmailUrl(email: string, subject: string = "Contacto desde Portafolio Web") {
+  return `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}&su=${encodeURIComponent(subject)}`
 }
+
 
 
 export function scrollToSection(id: string) {

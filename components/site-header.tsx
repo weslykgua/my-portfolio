@@ -3,7 +3,7 @@
 import React from "react"
 import { profile } from "@/lib/data"
 import { ThemeToggle } from "@/components/theme-toggle"
-import { scrollToSection } from "@/lib/utils"
+import { getGmailUrl, scrollToSection } from "@/lib/utils"
 import { Home, Mail } from "lucide-react"
 
 const nav = [
@@ -38,7 +38,6 @@ export function SiteHeader() {
           <span>Inicio</span>
         </a>
 
-
         {/* Navigation Menu */}
         <nav aria-label="Navegación principal" className="hidden md:block">
           <ul className="flex items-center gap-1">
@@ -61,14 +60,16 @@ export function SiteHeader() {
           <ThemeToggle />
 
           <a
-            href={`mailto:${profile.email}?subject=Contacto%20desde%20Portafolio%20Web`}
+            href={getGmailUrl(profile.email)}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-md bg-primary px-3.5 py-1.5 text-xs font-medium text-primary-foreground shadow-xs transition-all duration-150 hover:opacity-90 active:scale-95 whitespace-nowrap cursor-pointer"
           >
             <Mail className="h-3.5 w-3.5" />
             <span>Contacto</span>
           </a>
-
         </div>
+
       </div>
     </header>
   )

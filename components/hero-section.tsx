@@ -3,7 +3,7 @@
 import React from "react"
 import { profile } from "@/lib/data"
 import { GithubIcon, LinkedinIcon } from "@/components/icons"
-import { scrollToSection } from "@/lib/utils"
+import { getGmailUrl, scrollToSection } from "@/lib/utils"
 import { ArrowUpRight, Globe, Mail, MapPin, Phone } from "lucide-react"
 
 export function HeroSection() {
@@ -75,7 +75,9 @@ export function HeroSection() {
         </a>
 
         <a
-          href={`mailto:${profile.email}?subject=Contacto%20desde%20Portafolio%20Web`}
+          href={getGmailUrl(profile.email)}
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-4 py-2.5 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-secondary hover:text-brand cursor-pointer active:scale-95"
         >
           <Mail className="h-4 w-4 text-brand" />

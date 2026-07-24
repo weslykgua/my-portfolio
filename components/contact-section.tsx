@@ -4,6 +4,7 @@ import { useState } from "react"
 import { profile } from "@/lib/data"
 import { GithubIcon, LinkedinIcon } from "@/components/icons"
 import { SectionHeading } from "@/components/section-heading"
+import { getGmailUrl } from "@/lib/utils"
 import { ArrowUpRight, Check, Copy, Mail, MapPin, Phone } from "lucide-react"
 
 export function ContactSection() {
@@ -37,7 +38,9 @@ export function ContactSection() {
                 <p className="text-xs font-mono text-muted-foreground uppercase">Email</p>
                 <div className="flex items-center gap-2">
                   <a
-                    href={`mailto:${profile.email}?subject=Contacto%20desde%20Portafolio%20Web`}
+                    href={getGmailUrl(profile.email)}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="font-medium text-foreground hover:text-brand transition-colors"
                   >
                     {profile.email}
@@ -131,26 +134,17 @@ export function ContactSection() {
             </div>
           </div>
 
-          <div className="mt-8 pt-6 border-t border-border/60 flex flex-col sm:flex-row gap-3">
+          <div className="mt-8 pt-6 border-t border-border/60">
             <a
-              href={`mailto:${profile.email}?subject=Contacto%20desde%20Portafolio%20Web`}
-              className="inline-flex flex-1 items-center justify-center gap-2 rounded-lg bg-primary py-3 text-sm font-medium text-primary-foreground shadow transition-opacity hover:opacity-90 active:scale-95 cursor-pointer"
+              href={getGmailUrl(profile.email)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-3 text-sm font-medium text-primary-foreground shadow transition-opacity hover:opacity-90 active:scale-95 cursor-pointer"
             >
               Enviar correo electrónico
               <Mail className="h-4 w-4" />
             </a>
-
-            <a
-              href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}&su=${encodeURIComponent("Contacto desde Portafolio Web")}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-secondary px-4 py-3 text-sm font-medium text-foreground transition-colors hover:bg-secondary/80 active:scale-95 cursor-pointer whitespace-nowrap"
-            >
-              Abrir Gmail Web
-              <ArrowUpRight className="h-4 w-4" />
-            </a>
           </div>
-
         </div>
       </div>
     </section>
