@@ -285,5 +285,5 @@ export const education: Education = {
 
 export const personalAbout: string[] = [
   "Ingeniero en Informática de 23 años y Full Stack Developer. Me apasiona participar en el desarrollo de soluciones técnicas que simplifiquen procesos complejos, aportando valor real a los usuarios.",
-  "Aplico la filosofía Kaizen (mejora continua mediante PDCA) en mi desarrollo profesional, combinando disciplina, análisis de datos y aprendizaje constante para resolver desafíos técnicos."
+  "Me gusta iterar: probar, medir resultados reales y ajustar según lo que funciona. Es la misma lógica que aplico en el código y en cómo persigo mis propios objetivos, avanzar con ajustes constantes en vez de esperar la versión perfecta."
 ]
