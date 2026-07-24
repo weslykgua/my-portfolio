@@ -6,7 +6,7 @@ export const profile: Profile = {
   headline: "Full Stack Developer | Fintech · Vue 3 · Node.js · TypeScript · Web3",
   role: "Ingeniero en Informática & Full Stack Developer",
   location: "Santiago, Región Metropolitana, Chile",
-  tagline: "Construyo productos fintech y Web3 en producción con Vue 3, TypeScript y Node.js.",
+  tagline: "Construyo software con la meta de aprender algo nuevo en cada proyecto y siempre seguir mejorando.",
   summary:
     "Ingeniero en Informática con experiencia en producción desarrollando plataformas financieras escalables, con especial enfoque en tecnologías Web3. Especializado en Vue 3, TypeScript y Node.js. Actualmente ampliando mi stack hacia React y Next.js 16.",
   email: "weslykgua@gmail.com",

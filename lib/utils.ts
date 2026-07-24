@@ -7,8 +7,11 @@ export function cn(...inputs: ClassValue[]) {
 
 export function openEmailClient(email: string, subject: string = "Contacto desde Portafolio Web") {
   const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}`
-  window.location.href = mailtoUrl
+  const a = document.createElement("a")
+  a.href = mailtoUrl
+  a.click()
 }
+
 
 export function scrollToSection(id: string) {
   const targetId = id.startsWith("#") ? id.slice(1) : id

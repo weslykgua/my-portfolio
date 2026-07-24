@@ -3,7 +3,7 @@
 import React from "react"
 import { profile } from "@/lib/data"
 import { GithubIcon, LinkedinIcon } from "@/components/icons"
-import { openEmailClient, scrollToSection } from "@/lib/utils"
+import { scrollToSection } from "@/lib/utils"
 import { ArrowUpRight, Globe, Mail, MapPin, Phone } from "lucide-react"
 
 export function HeroSection() {
@@ -74,14 +74,13 @@ export function HeroSection() {
           <ArrowUpRight className="h-4 w-4" />
         </a>
 
-        <button
-          onClick={() => openEmailClient(profile.email)}
-          type="button"
+        <a
+          href={`mailto:${profile.email}?subject=Contacto%20desde%20Portafolio%20Web`}
           className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-4 py-2.5 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-secondary hover:text-brand cursor-pointer active:scale-95"
         >
           <Mail className="h-4 w-4 text-brand" />
           {profile.email}
-        </button>
+        </a>
 
         <a
           href={`tel:${profile.phone.replace(/\s+/g, "")}`}
