@@ -3,12 +3,12 @@ import type { Profile, Experience, Project, SkillCategory, Education } from "@/l
 export const profile: Profile = {
   name: "Wesly Alexander Cagua Romero",
   shortName: "Wesly Cagua",
-  headline: "Full Stack Engineer | Fintech · Web3 · Vue 3 · Node.js · TypeScript",
-  role: "Ingeniero en Informática & Full Stack Engineer",
+  headline: "Full Stack Developer | Fintech · Vue 3 · Node.js · TypeScript · Web3",
+  role: "Ingeniero en Informática & Full Stack Developer",
   location: "Santiago, Región Metropolitana, Chile",
   tagline: "Construyo productos fintech y Web3 en producción con Vue 3, TypeScript y Node.js.",
   summary:
-    "Ingeniero en Informática de 23 años y Full Stack Engineer con experiencia en producción desarrollando plataformas financieras y Web3. Especializado en Vue 3, TypeScript, Node.js y arquitecturas multichain. Actualmente ampliando mi stack hacia React y Next.js 16.",
+    "Ingeniero en Informática con experiencia en producción desarrollando plataformas financieras escalables, con especial enfoque en tecnologías Web3. Especializado en Vue 3, TypeScript y Node.js. Actualmente ampliando mi stack hacia React y Next.js 16.",
   email: "weslykgua@gmail.com",
   phone: "+56 9 2941 4929",
   languages: [
@@ -77,15 +77,16 @@ export const experiences: Experience[] = [
 export const projects: Project[] = [
   {
     title: "CLP Coin (CLPC)",
-    subtitle: "Plataforma Fintech & Stablecoin backed 1:1 por CLP",
+    subtitle: "Plataforma Fintech con Stablecoin respaldada 1:1 por Peso Chileno",
     badge: "Producción",
     description:
-      "Stablecoin fintech orientada a la digitalización del peso chileno. Plataforma multichain (5 EVM + Solana) con gestión de wallets digitales, transferencias financieras precisas y conexión directa con contratos inteligentes.",
+      "Stablecoin fintech orientada a la digitalización del peso chileno. Plataforma multichain con gestión de wallets digitales, transferencias financieras precisas y conexión directa con contratos inteligentes.",
     year: "2024 - Presente",
     highlights: [
-      "Arquitectura multichain en 5 redes EVM y Solana",
-      "Cálculo financiero de precisión decimal con Big.js",
-      "Integración de billeteras digitales: MetaMask y WalletConnect",
+      "Desarrollo e integración de módulos nuevos y visor/lector de PDF óptimo para la plataforma",
+      "Resolución de incidencias complejas y corrección de errores de conexión en MetaMask y WalletConnect",
+      "Cálculo financiero de precisión decimal estricta con Big.js para operaciones de balance",
+      "Optimización de la experiencia de usuario (UX), componentes reutilizables y recursos gráficos",
     ],
     tags: [
       "Vue 3",
@@ -102,14 +103,14 @@ export const projects: Project[] = [
   },
   {
     title: "Forgy Platform",
-    subtitle: "Plataforma de gestión de entrenamientos y nutrición fitness",
-    badge: "Proyecto Destacado 2026",
+    subtitle: "Proyecto de Título (Capstone) · DUOC UC",
+    badge: "Trabajo de Título 2026",
     description:
-      "Ecosistema full-stack para planificación de rutinas, registro de sesiones y análisis de progreso físico con un motor heurístico de recomendaciones personalizadas.",
+      "Ecosistema full-stack desarrollado y evaluado como Trabajo de Título (Capstone) para la carrera de Ingeniería en Informática en DUOC UC. Plataforma completa para planificación de rutinas, registro de sesiones y análisis de progreso físico con un motor de recomendaciones personalizadas.",
     year: "2026",
     highlights: [
       "Arquitectura Monorepo Full Stack: API REST (Node.js/Express) + App móvil híbrida (Ionic, Vue 3, Capacitor)",
-      "Motor heurístico de recomendaciones en TypeScript que analiza volumen, frecuencia, hábitos de sueño e hidratación",
+      "Motor de recomendaciones basado en reglas y métricas de entrenamiento en TypeScript (volumen, frecuencia e hidratación)",
       "Modelo relacional en PostgreSQL con Prisma ORM y comunicación en tiempo real con WebSockets (Socket.io)",
       "Autenticación segura (JWT, Bcrypt, Helmet, Rate limiting) y pruebas unitarias con Jest",
       "Despliegue automatizado con Docker en Railway (backend) y Vercel (frontend)",
@@ -185,17 +186,16 @@ export const skillCategories: SkillCategory[] = [
     items: ["PostgreSQL", "Prisma ORM", "MongoDB / NoSQL", "Modelado relacional", "Indexación"],
   },
   {
-    title: "Testing & DevOps",
+    title: "DevOps & CI/CD",
     items: [
-      "Jest",
       "Docker",
       "Docker Compose",
-      "Kubernetes (Básico / Académico)",
+      "CI/CD",
       "Railway",
       "Vercel",
       "Git / GitHub / GitLab",
+      "Jest",
       "Postman",
-      "CI/CD",
     ],
   },
   {
@@ -209,13 +209,15 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Seguridad & IA Aplicada",
+    title: "Seguridad",
+    items: ["JWT", "Bcrypt", "Helmet", "Rate Limiting"],
+  },
+  {
+    title: "IA & Productividad",
     items: [
-      "JWT",
-      "Bcrypt",
-      "Helmet",
-      "Rate Limiting",
-      "IA Aplicada (LLM-assisted dev, revisión de código, exploración de arquitectura)",
+      "LLM-assisted dev",
+      "Revisión de código asistida por IA",
+      "Exploración de arquitectura",
       "Python (POO, Análisis de Datos)",
       "Metodologías Ágiles (Scrum / Kanban)",
     ],
@@ -223,15 +225,19 @@ export const skillCategories: SkillCategory[] = [
 ]
 
 export const education: Education = {
-  degree: "Ingeniería en Informática (Computer Science)",
+  degree: "Ingeniería en Informática",
   institution: "DUOC UC",
   period: "2022 – 2026",
   location: "Santiago de Chile",
   featuredCourses: [
-    "Arquitectura y Calidad de Software",
-    "Análisis y Desarrollo de Modelos de Datos",
-    "Inteligencia de Negocios",
+    "Diseño y Gestión de Requisitos",
+    "Calidad de Software",
     "Gestión de Proyectos Informáticos",
+    "Arquitectura de Software",
+    "Seguridad en Sistemas Computacionales",
+    "Big Data / Minería de Datos",
+    "Integración de Plataformas",
+    "BPM (Business Process Management)",
   ],
   certifications: [
     {
@@ -278,6 +284,6 @@ export const education: Education = {
 }
 
 export const personalAbout: string[] = [
-  "Ingeniero en Informática de 23 años y Full Stack Engineer especializado en productos digitales, fintech y Web3. Me apasiona diseñar e implementar soluciones técnicas que simplifiquen procesos complejos, aportando valor real y centrado en las personas.",
-  "Aplico la filosofía Kaizen (mejora continua mediante el ciclo PDCA) y la disciplina del gimnasio en mi desarrollo profesional: sobrecarga progresiva diaria, análisis de datos, lectura de clásicos (La Odisea) y filosofía para resolver desafíos técnicos con resiliencia y estrategia."
+  "Ingeniero en Informática de 23 años y Full Stack Developer. Me apasiona participar en el desarrollo de soluciones técnicas que simplifiquen procesos complejos, aportando valor real a los usuarios.",
+  "Aplico la filosofía Kaizen (mejora continua mediante PDCA) en mi desarrollo profesional, combinando disciplina, análisis de datos y aprendizaje constante para resolver desafíos técnicos."
 ]

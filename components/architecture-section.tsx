@@ -5,10 +5,10 @@ import { ArrowRight, Cpu, Database, Globe, Layers, Server, ShieldCheck, Smartpho
 export function ArchitectureSection() {
   return (
     <section id="architecture" className="scroll-mt-20 border-t border-border py-16 md:py-24">
-      <SectionHeading index="03" title="Arquitectura de Sistemas" />
+      <SectionHeading index="03" title="Arquitectura Técnica" />
 
       <p className="mt-4 max-w-2xl text-pretty leading-relaxed text-muted-foreground text-sm sm:text-base">
-        Diseño y participo en arquitecturas Full Stack preparadas para escalar: desde integración multichain en Web3 hasta ecosistemas monorepo móviles con comunicación en tiempo real.
+        Participo en el diseño y desarrollo de arquitecturas Full Stack preparadas para escalar: desde integración multichain en Web3 hasta ecosistemas monorepo móviles con comunicación en tiempo real.
       </p>
 
       <div className="mt-10 grid grid-cols-1 gap-8 lg:grid-cols-2">
@@ -95,7 +95,7 @@ export function ArchitectureSection() {
               App Móvil, APIs REST &amp; WebSockets
             </h3>
             <p className="mt-2 text-xs text-muted-foreground leading-relaxed">
-              Ecosistema completo con motor de recomendación heurístico, persistencia relacional y WebSockets.
+              Ecosistema completo con motor de recomendación basado en reglas, persistencia relacional y WebSockets.
             </p>
 
             {/* Visual Flow Pipeline */}
@@ -123,7 +123,7 @@ export function ArchitectureSection() {
                   <span>Node.js / Express Server &amp; Real-time</span>
                 </div>
                 <p className="mt-1 font-mono text-xs text-muted-foreground pl-6">
-                  API REST · Socket.io (WebSockets) · Motor Heurístico TypeScript
+                  API REST · Socket.io (WebSockets) · Motor de Recomendaciones TypeScript
                 </p>
               </div>
 

@@ -31,7 +31,7 @@ export default function Page() {
             <span>{profile.location}</span>
           </div>
           <p className="font-mono text-xs text-muted-foreground">
-            Portafolio Profesional - Full Stack Engineer
+            Portafolio Profesional - Full Stack Developer
           </p>
         </div>
       </footer>

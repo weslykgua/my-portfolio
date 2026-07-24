@@ -25,7 +25,7 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="scroll-mt-20 border-t border-border py-16 md:py-24">
-      <SectionHeading index="06" title="Contacto" />
+      <SectionHeading index="07" title="Contacto" />
 
       <div className="mt-10 grid grid-cols-1 gap-10 lg:grid-cols-2">
         <div>

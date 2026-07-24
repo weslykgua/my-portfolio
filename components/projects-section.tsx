@@ -1,7 +1,7 @@
-import { projects } from "@/lib/data"
-import { Code2, ExternalLink, Sparkles } from "lucide-react"
+import { projects, profile } from "@/lib/data"
+import { ArrowUpRight, Code2, ExternalLink, Sparkles } from "lucide-react"
 import { SectionHeading } from "@/components/section-heading"
-import { TechBadge } from "@/components/icons"
+import { GithubIcon, TechBadge } from "@/components/icons"
 
 export function ProjectsSection() {
   return (
@@ -85,6 +85,28 @@ export function ProjectsSection() {
             </div>
           </div>
         ))}
+      </div>
+
+      {/* GitHub Callout Banner */}
+      <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 rounded-xl border border-border bg-secondary/30 p-6">
+        <div className="flex items-center gap-3">
+          <div className="rounded-lg bg-primary p-2.5 text-primary-foreground">
+            <GithubIcon className="h-5 w-5" />
+          </div>
+          <div>
+            <h4 className="text-sm font-bold text-foreground">Código &amp; Documentación en GitHub</h4>
+            <p className="text-xs text-muted-foreground">Explora mis repositorios, arquitecturas e implementaciones públicas.</p>
+          </div>
+        </div>
+        <a
+          href={profile.links.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-1.5 rounded-md bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition-opacity hover:opacity-90 active:scale-95 shrink-0"
+        >
+          <span>Ver GitHub</span>
+          <ArrowUpRight className="h-3.5 w-3.5" />
+        </a>
       </div>
     </section>
   )
