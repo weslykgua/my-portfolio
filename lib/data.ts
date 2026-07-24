@@ -278,6 +278,8 @@ export const education: Education = {
 }
 
 export const personalAbout: string[] = [
-  "Fuera del ámbito profesional, disfruto entrenar en el gimnasio, hacer trekking y viajar.",
-  "La bicicleta es mi principal medio de transporte, lo que me mantiene activo y me da una mirada curiosa para descubrir nuevos lugares.",
+  "Tengo 23 años y soy Ingeniero en Informática y Desarrollador Full Stack. Me proyecto profesionalmente como alguien capaz de proponer ideas innovadoras y desarrollar soluciones técnicas que ayuden a las personas, simplifiquen procesos complejos y generen un impacto positivo real.",
+  "Mi filosofía diaria se basa en la sobrecarga progresiva y la disciplina constante: me apasiona entrenar en el gimnasio para fortalecer mi estado físico y mental, enfocándome en avanzar día a día superando mis marcas con mayores pesos.",
+  "Disfruto profundamente de la lectura clásica y la filosofía, siendo La Odisea de Homero una de mis obras favoritas. Me apasiona estudiar la historia antigua y la mitología nórdica para extraer lecciones sobre resiliencia, estrategia y liderazgo aplicables al día a día.",
+  "Mi lema de vida y trabajo es la metodología Kaizen (mejora continua) mediante el ciclo PDCA (Plan, Do, Check, Act): identificar oportunidades, implementar soluciones, analizar datos reales con feedback humano y estandarizar procesos optimizados de alta calidad."
 ]
