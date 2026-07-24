@@ -8,6 +8,7 @@ import { Mail } from "lucide-react"
 const nav = [
   { label: "Experiencia", href: "#experience" },
   { label: "Proyectos", href: "#work" },
+  { label: "Arquitectura", href: "#architecture" },
   { label: "Skills", href: "#skills" },
   { label: "Educación", href: "#education" },
   { label: "Sobre mí", href: "#about" },
@@ -56,7 +57,7 @@ export function SiteHeader() {
                 <a
                   href={item.href}
                   onClick={(e) => handleNavClick(e, item.href)}
-                  className="inline-block whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium text-muted-foreground transition-all duration-150 hover:bg-secondary/60 hover:text-foreground active:scale-95"
+                  className="inline-block whitespace-nowrap rounded-md px-3 py-1.5 text-sm font-medium text-muted-foreground transition-all duration-150 hover:bg-secondary/60 hover:text-foreground active:scale-95 text-xs sm:text-sm"
                 >
                   {item.label}
                 </a>

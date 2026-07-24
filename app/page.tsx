@@ -2,6 +2,7 @@ import { SiteHeader } from "@/components/site-header"
 import { HeroSection } from "@/components/hero-section"
 import { ExperienceSection } from "@/components/experience-section"
 import { ProjectsSection } from "@/components/projects-section"
+import { ArchitectureSection } from "@/components/architecture-section"
 import { SkillsSection } from "@/components/skills-section"
 import { EducationSection } from "@/components/education-section"
 import { AboutSection } from "@/components/about-section"
@@ -16,6 +17,7 @@ export default function Page() {
         <HeroSection />
         <ExperienceSection />
         <ProjectsSection />
+        <ArchitectureSection />
         <SkillsSection />
         <EducationSection />
         <AboutSection />
@@ -29,7 +31,7 @@ export default function Page() {
             <span>{profile.location}</span>
           </div>
           <p className="font-mono text-xs text-muted-foreground">
-            Portafolio Profesional - Full Stack Developer
+            Portafolio Profesional - Full Stack Engineer
           </p>
         </div>
       </footer>

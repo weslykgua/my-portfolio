@@ -3,12 +3,12 @@ import type { Profile, Experience, Project, SkillCategory, Education } from "@/l
 export const profile: Profile = {
   name: "Wesly Alexander Cagua Romero",
   shortName: "Wesly Cagua",
-  headline: "Desarrollador Full Stack | Node.js · TypeScript · Vue 3",
-  role: "Ingeniero en Informática & Full Stack Developer",
+  headline: "Full Stack Engineer | Fintech · Web3 · Vue 3 · Node.js · TypeScript",
+  role: "Ingeniero en Informática & Full Stack Engineer",
   location: "Santiago, Región Metropolitana, Chile",
   tagline: "Construyo productos fintech y Web3 en producción con Vue 3, TypeScript y Node.js.",
   summary:
-    "Ingeniero en Informática y Desarrollador Full Stack con más de 2 años de experiencia construyendo aplicaciones web y móviles escalables. Especializado en Vue 3, TypeScript y Node.js, con experiencia real en producción desarrollando plataformas fintech y Web3. Actualmente ampliando mi stack hacia React y Next.js, este mismo portafolio está construido con Next.js 16, React 19 y Tailwind CSS v4.",
+    "Ingeniero en Informática de 23 años y Full Stack Engineer con experiencia en producción desarrollando plataformas financieras y Web3. Especializado en Vue 3, TypeScript, Node.js y arquitecturas multichain. Actualmente ampliando mi stack hacia React y Next.js 16.",
   email: "weslykgua@gmail.com",
   phone: "+56 9 2941 4929",
   languages: [
@@ -32,9 +32,9 @@ export const experiences: Experience[] = [
     description:
       "Desarrollador Full Stack especializado en Vue 3, TypeScript, Node.js y tecnologías Web3, participando en el diseño, desarrollo y evolución de plataformas financieras basadas en blockchain. He contribuido al desarrollo de CLP Coin (CLPC), una stablecoin respaldada 1:1 por el Peso Chileno, construyendo soluciones escalables que integran infraestructura blockchain con procesos financieros tradicionales.",
     highlights: [
-      "Diseñé e implementé funcionalidades para una arquitectura multichain, integrando redes EVM (Ethereum, Polygon, BNB Smart Chain, Optimism y Arbitrum) y Solana mediante Web3.js y WalletConnect.",
+      "Participé en el desarrollo de funcionalidades para una arquitectura multichain, integrando redes EVM (Ethereum, Polygon, BNB Smart Chain, Optimism y Arbitrum) y Solana mediante Web3.js y WalletConnect.",
       "Implementé Big.js para garantizar precisión en operaciones financieras y cálculos de balances, evitando errores derivados de la aritmética de punto flotante.",
-      "Diseñé componentes reutilizables y una arquitectura frontend modular basada en Vue 3, TypeScript y Pinia, facilitando la escalabilidad y el mantenimiento de la aplicación.",
+      "Desarrollé componentes reutilizables y contribuí a una arquitectura frontend modular basada en Vue 3, TypeScript y Pinia, facilitando la escalabilidad y el mantenimiento de la aplicación.",
       "Optimicé la experiencia de usuario mediante Infinite Scroll, mejoras de rendimiento y resolución de incidencias complejas relacionadas con MetaMask, WalletConnect y eventos blockchain.",
       "Participé activamente en revisiones técnicas, definición de soluciones, mejora continua y desarrollo colaborativo bajo metodologías Agile.",
     ],
@@ -190,7 +190,7 @@ export const skillCategories: SkillCategory[] = [
       "Jest",
       "Docker",
       "Docker Compose",
-      "Kubernetes (Fundamentos)",
+      "Kubernetes (Básico / Académico)",
       "Railway",
       "Vercel",
       "Git / GitHub / GitLab",
@@ -209,15 +209,15 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    title: "Seguridad & Otros",
+    title: "Seguridad & IA Aplicada",
     items: [
       "JWT",
       "Bcrypt",
       "Helmet",
       "Rate Limiting",
-      "Python (POO, Análisis de Datos, ML)",
+      "IA Aplicada (LLM-assisted dev, revisión de código, exploración de arquitectura)",
+      "Python (POO, Análisis de Datos)",
       "Metodologías Ágiles (Scrum / Kanban)",
-      "IA como Herramienta (Claude, ChatGPT)",
     ],
   },
 ]
@@ -278,8 +278,6 @@ export const education: Education = {
 }
 
 export const personalAbout: string[] = [
-  "Tengo 23 años y soy Ingeniero en Informática y Desarrollador Full Stack. Me proyecto profesionalmente como alguien capaz de proponer ideas innovadoras y desarrollar soluciones técnicas que ayuden a las personas, simplifiquen procesos complejos y generen un impacto positivo real.",
-  "Mi filosofía diaria se basa en la sobrecarga progresiva y la disciplina constante: me apasiona entrenar en el gimnasio para fortalecer mi estado físico y mental, enfocándome en avanzar día a día superando mis marcas con mayores pesos.",
-  "Disfruto profundamente de la lectura clásica y la filosofía, siendo La Odisea de Homero una de mis obras favoritas. Me apasiona estudiar la historia antigua y la mitología nórdica para extraer lecciones sobre resiliencia, estrategia y liderazgo aplicables al día a día.",
-  "Mi lema de vida y trabajo es la metodología Kaizen (mejora continua) mediante el ciclo PDCA (Plan, Do, Check, Act): identificar oportunidades, implementar soluciones, analizar datos reales con feedback humano y estandarizar procesos optimizados de alta calidad."
+  "Ingeniero en Informática de 23 años y Full Stack Engineer especializado en productos digitales, fintech y Web3. Me apasiona diseñar e implementar soluciones técnicas que simplifiquen procesos complejos, aportando valor real y centrado en las personas.",
+  "Aplico la filosofía Kaizen (mejora continua mediante el ciclo PDCA) y la disciplina del gimnasio en mi desarrollo profesional: sobrecarga progresiva diaria, análisis de datos, lectura de clásicos (La Odisea) y filosofía para resolver desafíos técnicos con resiliencia y estrategia."
 ]
