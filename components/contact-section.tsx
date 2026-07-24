@@ -4,6 +4,7 @@ import { useState } from "react"
 import { profile } from "@/lib/data"
 import { GithubIcon, LinkedinIcon } from "@/components/icons"
 import { SectionHeading } from "@/components/section-heading"
+import { openEmailClient } from "@/lib/utils"
 import { ArrowUpRight, Check, Copy, Mail, MapPin, Phone } from "lucide-react"
 
 export function ContactSection() {
@@ -13,14 +14,6 @@ export function ContactSection() {
     navigator.clipboard.writeText(profile.email)
     setCopied(true)
     setTimeout(() => setCopied(false), 2500)
-  }
-
-  const openEmail = (e: React.MouseEvent) => {
-    e.preventDefault()
-    // Open Gmail web compose in a new tab AND trigger mailto protocol
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}&su=${encodeURIComponent("Contacto desde Portafolio Web")}`
-    window.open(gmailUrl, "_blank")
-    window.location.href = `mailto:${profile.email}?subject=Contacto%20desde%20Portafolio%20Web`
   }
 
   return (
@@ -46,7 +39,10 @@ export function ContactSection() {
                 <div className="flex items-center gap-2">
                   <a
                     href={`mailto:${profile.email}`}
-                    onClick={openEmail}
+                    onClick={(e) => {
+                      e.preventDefault()
+                      openEmailClient(profile.email)
+                    }}
                     className="font-medium text-foreground hover:text-brand transition-colors"
                   >
                     {profile.email}
@@ -142,7 +138,7 @@ export function ContactSection() {
 
           <div className="mt-8 pt-6 border-t border-border/60">
             <button
-              onClick={openEmail}
+              onClick={() => openEmailClient(profile.email)}
               type="button"
               className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary py-3 text-sm font-medium text-primary-foreground shadow transition-opacity hover:opacity-90 active:scale-95 cursor-pointer"
             >

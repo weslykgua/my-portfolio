@@ -3,16 +3,10 @@
 import React from "react"
 import { profile } from "@/lib/data"
 import { GithubIcon, LinkedinIcon } from "@/components/icons"
+import { openEmailClient, scrollToSection } from "@/lib/utils"
 import { ArrowUpRight, Globe, Mail, MapPin, Phone } from "lucide-react"
 
 export function HeroSection() {
-  const openEmail = (e: React.MouseEvent) => {
-    e.preventDefault()
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}&su=${encodeURIComponent("Contacto desde Portafolio Web")}`
-    window.open(gmailUrl, "_blank")
-    window.location.href = `mailto:${profile.email}?subject=Contacto%20desde%20Portafolio%20Web`
-  }
-
   return (
     <section id="top" className="pt-16 pb-14 md:pt-24 md:pb-20">
       {/* Availability Status */}
@@ -70,6 +64,10 @@ export function HeroSection() {
       <div className="mt-8 flex flex-wrap items-center gap-4">
         <a
           href="#experience"
+          onClick={(e) => {
+            e.preventDefault()
+            scrollToSection("#experience")
+          }}
           className="inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground shadow-sm transition-all hover:opacity-90 active:scale-95"
         >
           Ver experiencia
@@ -77,7 +75,7 @@ export function HeroSection() {
         </a>
 
         <button
-          onClick={openEmail}
+          onClick={() => openEmailClient(profile.email)}
           type="button"
           className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-4 py-2.5 text-sm font-medium text-foreground shadow-sm transition-colors hover:bg-secondary hover:text-brand cursor-pointer active:scale-95"
         >

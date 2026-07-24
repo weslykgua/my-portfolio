@@ -1,6 +1,7 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
+import { Moon, Sun } from "lucide-react"
 
 export function ThemeToggle() {
   const [isDark, setIsDark] = useState<boolean>(false)
@@ -28,10 +29,10 @@ export function ThemeToggle() {
     }
   }, [])
 
-  const toggleTheme = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const checked = e.target.checked
-    setIsDark(checked)
-    if (checked) {
+  const toggleTheme = () => {
+    const nextDark = !isDark
+    setIsDark(nextDark)
+    if (nextDark) {
       document.documentElement.classList.add("dark")
       document.documentElement.classList.remove("light")
       localStorage.setItem("theme", "dark")
@@ -43,73 +44,23 @@ export function ThemeToggle() {
   }
 
   if (!mounted) {
-    return <div className="w-[52px] h-[30px]" />
+    return <div className="h-9 w-9 rounded-lg border border-border bg-secondary/50" />
   }
 
   return (
-    <div className="flex items-center">
-      <label className="theme-switch" aria-label="Cambiar tema de color">
-        <input
-          id="theme-input"
-          type="checkbox"
-          checked={isDark}
-          onChange={toggleTheme}
-        />
-        <div className="slider round">
-          <div className="sun-moon">
-            <svg id="moon-dot-1" className="moon-dot" viewBox="0 0 100 100">
-              <circle cx={50} cy={50} r={50} />
-            </svg>
-            <svg id="moon-dot-2" className="moon-dot" viewBox="0 0 100 100">
-              <circle cx={50} cy={50} r={50} />
-            </svg>
-            <svg id="moon-dot-3" className="moon-dot" viewBox="0 0 100 100">
-              <circle cx={50} cy={50} r={50} />
-            </svg>
-            <svg id="light-ray-1" className="light-ray" viewBox="0 0 100 100">
-              <circle cx={50} cy={50} r={50} />
-            </svg>
-            <svg id="light-ray-2" className="light-ray" viewBox="0 0 100 100">
-              <circle cx={50} cy={50} r={50} />
-            </svg>
-            <svg id="light-ray-3" className="light-ray" viewBox="0 0 100 100">
-              <circle cx={50} cy={50} r={50} />
-            </svg>
-            <svg id="cloud-1" className="cloud-dark" viewBox="0 0 100 100">
-              <circle cx={50} cy={50} r={50} />
-            </svg>
-            <svg id="cloud-2" className="cloud-dark" viewBox="0 0 100 100">
-              <circle cx={50} cy={50} r={50} />
-            </svg>
-            <svg id="cloud-3" className="cloud-dark" viewBox="0 0 100 100">
-              <circle cx={50} cy={50} r={50} />
-            </svg>
-            <svg id="cloud-4" className="cloud-light" viewBox="0 0 100 100">
-              <circle cx={50} cy={50} r={50} />
-            </svg>
-            <svg id="cloud-5" className="cloud-light" viewBox="0 0 100 100">
-              <circle cx={50} cy={50} r={50} />
-            </svg>
-            <svg id="cloud-6" className="cloud-light" viewBox="0 0 100 100">
-              <circle cx={50} cy={50} r={50} />
-            </svg>
-          </div>
-          <div className="stars">
-            <svg id="star-1" className="star" viewBox="0 0 20 20">
-              <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z" />
-            </svg>
-            <svg id="star-2" className="star" viewBox="0 0 20 20">
-              <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z" />
-            </svg>
-            <svg id="star-3" className="star" viewBox="0 0 20 20">
-              <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z" />
-            </svg>
-            <svg id="star-4" className="star" viewBox="0 0 20 20">
-              <path d="M 0 10 C 10 10,10 10 ,0 10 C 10 10 , 10 10 , 10 20 C 10 10 , 10 10 , 20 10 C 10 10 , 10 10 , 10 0 C 10 10,10 10 ,0 10 Z" />
-            </svg>
-          </div>
-        </div>
-      </label>
-    </div>
+    <button
+      onClick={toggleTheme}
+      type="button"
+      aria-label="Cambiar tema de color"
+      title={isDark ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
+      className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-border bg-background p-2 text-foreground shadow-xs transition-all hover:bg-secondary hover:text-brand active:scale-95 cursor-pointer"
+    >
+      {isDark ? (
+        <Sun className="h-4 w-4 text-amber-400 transition-transform duration-200 hover:rotate-45" />
+      ) : (
+        <Moon className="h-4 w-4 text-foreground/80 transition-transform duration-200 hover:-rotate-12" />
+      )}
+    </button>
   )
 }
+

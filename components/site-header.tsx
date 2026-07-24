@@ -3,6 +3,7 @@
 import React from "react"
 import { profile } from "@/lib/data"
 import { ThemeToggle } from "@/components/theme-toggle"
+import { openEmailClient, scrollToSection } from "@/lib/utils"
 import { Mail } from "lucide-react"
 
 const nav = [
@@ -19,19 +20,8 @@ export function SiteHeader() {
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith("#")) {
       e.preventDefault()
-      const targetId = href.replace("#", "")
-      const element = document.getElementById(targetId)
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" })
-      }
+      scrollToSection(href)
     }
-  }
-
-  const openEmail = (e: React.MouseEvent) => {
-    e.preventDefault()
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(profile.email)}&su=${encodeURIComponent("Contacto desde Portafolio Web")}`
-    window.open(gmailUrl, "_blank")
-    window.location.href = `mailto:${profile.email}?subject=Contacto%20desde%20Portafolio%20Web`
   }
 
   return (
@@ -71,7 +61,8 @@ export function SiteHeader() {
           <ThemeToggle />
 
           <button
-            onClick={openEmail}
+            onClick={() => openEmailClient(profile.email)}
+
             type="button"
             className="inline-flex items-center gap-1.5 rounded-md bg-primary px-3.5 py-1.5 text-xs font-medium text-primary-foreground shadow-xs transition-all duration-150 hover:opacity-90 active:scale-95 whitespace-nowrap cursor-pointer"
           >
