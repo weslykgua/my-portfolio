@@ -5,7 +5,7 @@ import { Award, BookOpen, GraduationCap } from "lucide-react"
 export function EducationSection() {
   return (
     <section id="education" className="scroll-mt-20 border-t border-border py-16 md:py-24">
-      <SectionHeading index="05" title="Educación y certificaciones" />
+      <SectionHeading index="06" title="Educación y certificaciones" />
 
       <div className="mt-10 space-y-10">
         {/* Degree Banner */}

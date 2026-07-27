@@ -44,6 +44,7 @@ export type Project = {
   tags: string[]
   link: string
   repo?: string
+  image?: string
 }
 
 export type SkillCategory = {

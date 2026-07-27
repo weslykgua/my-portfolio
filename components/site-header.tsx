@@ -7,12 +7,12 @@ import { getGmailUrl, scrollToSection } from "@/lib/utils"
 import { Home, Mail } from "lucide-react"
 
 const nav = [
+  { label: "Sobre mí", href: "#about" },
   { label: "Experiencia", href: "#experience" },
+  { label: "Stack", href: "#skills" },
   { label: "Proyectos", href: "#work" },
   { label: "Arquitectura", href: "#architecture" },
-  { label: "Skills", href: "#skills" },
   { label: "Educación", href: "#education" },
-  { label: "Sobre mí", href: "#about" },
   { label: "Contacto", href: "#contact" },
 ]
 

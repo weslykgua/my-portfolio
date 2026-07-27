@@ -1,6 +1,6 @@
 import { personalAbout } from "@/lib/data"
 import { SectionHeading } from "@/components/section-heading"
-import { BookOpen, Code2, Dumbbell, TrendingUp } from "lucide-react"
+import { BookOpen, Code2, Dumbbell, TrendingUp, CheckCircle2 } from "lucide-react"
 
 const coreInterests = [
   { label: "Fitness & Entrenamiento", icon: Dumbbell },
@@ -11,14 +11,19 @@ const coreInterests = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="scroll-mt-20 border-t border-border py-16 md:py-24">
-      <SectionHeading index="06" title="Sobre mí" />
+    <section id="about" className="scroll-mt-20 border-t border-border py-12 md:py-16">
+      <SectionHeading index="01" title="Sobre mí" />
 
       <div className="mt-10 max-w-3xl space-y-6">
-        {/* Narrative Paragraphs */}
-        <div className="space-y-4 text-pretty leading-relaxed text-muted-foreground text-base sm:text-lg">
+        {/* Narrative Highlights */}
+        <div className="space-y-3">
           {personalAbout.map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
+            <div key={i} className="flex items-start gap-3 rounded-lg border border-border/60 bg-card/40 p-4 transition-colors hover:bg-card/70">
+              <CheckCircle2 className="h-5 w-5 shrink-0 text-brand mt-0.5" />
+              <p className="text-sm sm:text-base leading-relaxed text-foreground/90 font-medium">
+                {paragraph}
+              </p>
+            </div>
           ))}
         </div>
 
@@ -49,3 +54,4 @@ export function AboutSection() {
     </section>
   )
 }
+

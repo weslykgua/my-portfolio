@@ -1,12 +1,12 @@
 import { projects, profile } from "@/lib/data"
-import { ArrowUpRight, Code2, ExternalLink, Sparkles } from "lucide-react"
+import { ArrowUpRight, Code2, ExternalLink, Image as ImageIcon, Sparkles } from "lucide-react"
 import { SectionHeading } from "@/components/section-heading"
 import { GithubIcon, TechBadge } from "@/components/icons"
 
 export function ProjectsSection() {
   return (
     <section id="work" className="scroll-mt-20 border-t border-border py-16 md:py-24">
-      <SectionHeading index="02" title="Proyectos destacados" />
+      <SectionHeading index="04" title="Productos y Proyectos" />
 
       <div className="mt-10 grid grid-cols-1 gap-8">
         {projects.map((project) => (
@@ -26,8 +26,29 @@ export function ProjectsSection() {
                 </span>
               </div>
 
+              {/* 16:9 Image Preview / Placeholder Frame */}
+              <div className="mt-5 relative aspect-[16/9] w-full overflow-hidden rounded-lg border border-border/60 bg-secondary/30 transition-colors group-hover:border-brand/30">
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={`Previsualización de ${project.title}`}
+                    className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                ) : (
+                  <div className="flex h-full w-full flex-col items-center justify-center gap-2 border border-dashed border-border/80 bg-secondary/20 p-4 text-center">
+                    <div className="rounded-full bg-background/80 p-3 text-brand shadow-xs border border-border/60">
+                      <ImageIcon className="h-6 w-6" />
+                    </div>
+                    <div className="font-mono text-xs">
+                      <p className="font-semibold text-foreground">Vista previa del proyecto</p>
+                      <p className="text-[11px] text-muted-foreground mt-0.5">Captura de pantalla (16:9)</p>
+                    </div>
+                  </div>
+                )}
+              </div>
+
               {/* Title & Subtitle */}
-              <h3 className="mt-4 text-2xl font-bold tracking-tight text-foreground group-hover:text-brand transition-colors">
+              <h3 className="mt-5 text-2xl font-bold tracking-tight text-foreground group-hover:text-brand transition-colors">
                 {project.title}
               </h3>
               <p className="mt-1 font-mono text-xs text-muted-foreground">{project.subtitle}</p>
@@ -111,3 +132,4 @@ export function ProjectsSection() {
     </section>
   )
 }
+
