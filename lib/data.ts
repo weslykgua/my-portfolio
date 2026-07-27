@@ -30,7 +30,7 @@ export const experiences: Experience[] = [
     description:
       "Desarrollo Full Stack en la arquitectura y evolución de plataformas financieras, integrando servicios Web3 y sistemas transaccionales con foco en rendimiento y UX.",
     highlights: [
-      "Desarrollo e integración de arquitecturas multichain (redes EVM y Solana) consumiendo REST APIs y protocolos Web3.",
+      "Desarrollo e integración de arquitecturas multichain (redes EVM) consumiendo REST APIs y protocolos Web3.",
       "Implementación de lógica transaccional de precisión decimal para cálculos financieros y gestión de balances.",
       "Construcción de módulos frontend escalables y reutilizables con Vue 3, TypeScript y gestión de estado con Pinia.",
       "Optimización de experiencia de usuario (UX/UI), rendimiento frontend y entregas continuas bajo metodologías Agile.",
@@ -78,7 +78,7 @@ export const projects: Project[] = [
       "Plataforma fintech multichain para gestión de wallets digitales, transferencias financieras precisas y conexión con contratos inteligentes.",
     year: "2024 - Presente",
     highlights: [
-      "Arquitectura Multichain: Soporte e integración fluida en 5 redes EVM (Ethereum, Polygon, BNB Chain, Optimism, Arbitrum) y Solana mediante Web3.js y WalletConnect.",
+      "Arquitectura Multichain: Soporte e integración fluida en 5 redes EVM (Ethereum, Polygon, BNB Chain, Optimism, Arbitrum) mediante Web3.js y WalletConnect.",
       "Motor de Precisión Financiera: Cálculo matemático de alta precisión decimal con Big.js para evitar errores en transacciones y balances.",
       "Frontend Escalable & APIs: Componentes modulares en Vue 3 y TypeScript consumiendo servicios REST APIs optimizados.",
     ],
