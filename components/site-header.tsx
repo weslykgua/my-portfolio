@@ -11,7 +11,6 @@ const nav = [
   { label: "Experiencia", href: "#experience" },
   { label: "Stack", href: "#skills" },
   { label: "Proyectos", href: "#work" },
-  { label: "Arquitectura", href: "#architecture" },
   { label: "Educación", href: "#education" },
   { label: "Contacto", href: "#contact" },
 ]

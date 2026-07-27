@@ -4,7 +4,6 @@ import { AboutSection } from "@/components/about-section"
 import { ExperienceSection } from "@/components/experience-section"
 import { SkillsSection } from "@/components/skills-section"
 import { ProjectsSection } from "@/components/projects-section"
-import { ArchitectureSection } from "@/components/architecture-section"
 import { EducationSection } from "@/components/education-section"
 import { ContactSection } from "@/components/contact-section"
 import { profile } from "@/lib/data"
@@ -19,7 +18,6 @@ export default function Page() {
         <ExperienceSection />
         <SkillsSection />
         <ProjectsSection />
-        <ArchitectureSection />
         <EducationSection />
         <ContactSection />
       </main>

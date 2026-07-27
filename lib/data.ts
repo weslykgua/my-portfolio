@@ -8,7 +8,7 @@ export const profile: Profile = {
   location: "Santiago, Región Metropolitana, Chile",
   tagline: "Construyo software escalable y de alto impacto con código limpio, arquitectura sólida y mejora continua.",
   summary:
-    "Ingeniero en Informática y Full Stack Developer especializado en desarrollo web escalable y plataformas Fintech/Web3. Con experiencia en producción utilizando Vue 3, TypeScript, Node.js, React y Next.js, integrando REST APIs y metodologías Agile para productos digitales de alto rendimiento.",
+    "Desarrollo aplicaciones web escalables y plataformas Fintech/Web3 combinando código limpio, arquitectura de alto rendimiento y excelentes experiencias de usuario.",
   email: "weslykgua@gmail.com",
   phone: "+56 9 2941 4929",
   languages: [
@@ -78,9 +78,9 @@ export const projects: Project[] = [
       "Plataforma fintech multichain para gestión de wallets digitales, transferencias financieras precisas y conexión con contratos inteligentes.",
     year: "2024 - Presente",
     highlights: [
-      "Integración multichain compatible con redes EVM y Solana mediante Web3.js y WalletConnect.",
-      "Lógica de precisión decimal estricta con Big.js para transacciones y balances financieros.",
-      "Componentes frontend reutilizables desarrollados en Vue 3 y TypeScript con consumo de REST APIs.",
+      "Arquitectura Multichain: Soporte e integración fluida en 5 redes EVM (Ethereum, Polygon, BNB Chain, Optimism, Arbitrum) y Solana mediante Web3.js y WalletConnect.",
+      "Motor de Precisión Financiera: Cálculo matemático de alta precisión decimal con Big.js para evitar errores en transacciones y balances.",
+      "Frontend Escalable & APIs: Componentes modulares en Vue 3 y TypeScript consumiendo servicios REST APIs optimizados.",
     ],
     tags: [
       "Vue 3",
@@ -276,8 +276,8 @@ export const education: Education = {
 }
 
 export const personalAbout: string[] = [
-  "Ingeniero en Informática y Full Stack Developer especializado en desarrollo web escalable y soluciones Fintech/Web3.",
-  "Con experiencia práctica en Vue 3, TypeScript, Node.js, React y Next.js, integrando REST APIs y metodologías Agile para construir productos digitales eficientes y mantenibles.",
-  "Enfoque de trabajo orientado a resultados: iteración continua, código limpio y optimización constante según necesidades reales de producción.",
+  "Ingeniero en Informática enfocado en transformar requerimientos complejos en interfaces ágiles, intuitivas y mantenibles.",
+  "Mi experiencia principal se centra en el ecosistema JavaScript/TypeScript (Vue 3, React, Next.js, Node.js), con especial énfasis en el consumo eficiente de REST APIs y la arquitectura frontend.",
+  "Trabajo bajo metodologías Agile y con una filosofía de iteración constante: probar en producción, medir resultados reales y optimizar continuamente el código.",
 ]
 
