@@ -35,9 +35,11 @@ export function ProjectsSection() {
                 </div>
 
                 {/* Project Carousel / Image Preview */}
-                <div className="mt-5">
-                  <ProjectCarousel images={projectImages} title={project.title} />
-                </div>
+                {projectImages.length > 0 && (
+                  <div className="mt-5">
+                    <ProjectCarousel images={projectImages} title={project.title} />
+                  </div>
+                )}
 
                 {/* Title & Subtitle */}
                 <h3 className="mt-5 text-2xl font-bold tracking-tight text-foreground transition-colors group-hover:text-brand">

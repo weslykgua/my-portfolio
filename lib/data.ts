@@ -73,9 +73,8 @@ export const projects: Project[] = [
     title: "CLP Coin (CLPC)",
     subtitle: "Plataforma Fintech & Web3 con Stablecoin en pesos chilenos",
     badge: "Producción",
-    image: "/projects/clpc/clpc-main.png",
+    image: "/projects/clpc/clpc-1.png",
     images: [
-      "/projects/clpc/clpc-main.png",
       "/projects/clpc/clpc-1.png",
       "/projects/clpc/clpc-2.png",
       "/projects/clpc/clpc-3.png",

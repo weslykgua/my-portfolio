@@ -98,17 +98,7 @@ export function ProjectCarousel({
   }
 
   if (!images || images.length === 0) {
-    return (
-      <div className="flex aspect-[16/9] w-full flex-col items-center justify-center gap-2 rounded-lg border border-dashed border-border/80 bg-secondary/20 p-4 text-center">
-        <div className="rounded-full border border-border bg-card p-3 text-muted-foreground shadow-2xs">
-          <ImageIcon className="h-5 w-5 text-brand" />
-        </div>
-        <div className="text-xs">
-          <p className="font-semibold text-foreground">Vista previa del proyecto</p>
-          <p className="mt-0.5 text-[11px] text-muted-foreground">Sin capturas de pantalla</p>
-        </div>
-      </div>
-    )
+    return null
   }
 
   return (
